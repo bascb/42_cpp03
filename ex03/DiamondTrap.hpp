@@ -1,0 +1,36 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   DiamondTrap.hpp                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: bcastelo <bcastelo@student.42lisboa.com    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/03/05 21:41:57 by bcastelo          #+#    #+#             */
+/*   Updated: 2024/03/10 12:31:07 by bcastelo         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#ifndef DIAMONDTRAP_HPP
+#define DIAMONDTRAP_HPP
+
+#include "ClapTrap.hpp"
+#include "ScavTrap.hpp"
+#include "FragTrap.hpp"
+#include <iostream>
+#include <string>
+
+class DiamondTrap : public ScavTrap , public FragTrap
+{
+	private:
+		std::string	Name;
+	public:
+		DiamondTrap( void );
+		DiamondTrap( std::string NewName );
+		//DiamondTrap( const DiamondTrap& );
+		//DiamondTrap&	operator=( const DiamondTrap& );
+		~DiamondTrap( void );
+		void	whoAmI( void );
+		void	getData( void );
+};
+
+#endif

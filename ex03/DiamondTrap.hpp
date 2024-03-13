@@ -6,7 +6,7 @@
 /*   By: bcastelo <bcastelo@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/05 21:41:57 by bcastelo          #+#    #+#             */
-/*   Updated: 2024/03/10 12:31:07 by bcastelo         ###   ########.fr       */
+/*   Updated: 2024/03/13 21:41:26 by bcastelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,8 @@ class DiamondTrap : public ScavTrap , public FragTrap
 	public:
 		DiamondTrap( void );
 		DiamondTrap( std::string NewName );
-		//DiamondTrap( const DiamondTrap& );
-		//DiamondTrap&	operator=( const DiamondTrap& );
+		DiamondTrap( const DiamondTrap& );
+		DiamondTrap&	operator=( const DiamondTrap& );
 		~DiamondTrap( void );
 		void	whoAmI( void );
 		void	getData( void );

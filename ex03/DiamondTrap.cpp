@@ -6,7 +6,7 @@
 /*   By: bcastelo <bcastelo@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/05 21:45:10 by bcastelo          #+#    #+#             */
-/*   Updated: 2024/03/12 22:31:17 by bcastelo         ###   ########.fr       */
+/*   Updated: 2024/03/13 21:49:04 by bcastelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ DiamondTrap::DiamondTrap( std::string NewName ) : ClapTrap(NewName + "_clap_name
 	EnergyPoints = 50;
 }
 
-/* DiamondTrap::DiamondTrap( const DiamondTrap& src) : ScavTrap(src) , FragTrap(src) , Name(src.Name)
+DiamondTrap::DiamondTrap( const DiamondTrap& src) : ClapTrap(src) , ScavTrap(src) , FragTrap(src) , Name(src.Name) 
 {
 	std::cout << "DiamondTrap Copy constructor called for " << src.Name << std::endl;
 }
@@ -35,12 +35,12 @@ DiamondTrap&	DiamondTrap::operator=( const DiamondTrap& src)
 	if (this != &src)
 	{
 		Name = src.Name;
-		this->FragTrap::HitPoints = src.FragTrap::HitPoints;
-		this->ScavTrap::EnergyPoints = src.ScavTrap::EnergyPoints;
-		this->FragTrap::AttackDamage = src.FragTrap::AttackDamage;
+		this->HitPoints = src.HitPoints;
+		this->EnergyPoints = src.EnergyPoints;
+		this->AttackDamage = src.AttackDamage;
 	}
 	return (*this);
-} */
+}
 
 DiamondTrap::~DiamondTrap( void )
 {

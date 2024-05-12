@@ -6,7 +6,7 @@
 /*   By: bcastelo <bcastelo@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/03 17:29:29 by bcastelo          #+#    #+#             */
-/*   Updated: 2024/03/03 22:48:06 by bcastelo         ###   ########.fr       */
+/*   Updated: 2024/05/12 20:53:59 by bcastelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,9 @@ int	main( void )
 	ClapTrap	soldier2("Loser");
 	ScavTrap	der1("Different");
 	ScavTrap	der2( der1 );
-	ScavTrap	der3 = der1;
+	ScavTrap	der3("Assign");
 	
+	der2 = der3;
 	soldier1.attack("Loser");
 	soldier2.takeDamage(10);
 	soldier1.takeDamage(5);

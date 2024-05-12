@@ -6,7 +6,7 @@
 /*   By: bcastelo <bcastelo@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/03 18:16:13 by bcastelo          #+#    #+#             */
-/*   Updated: 2024/03/03 19:57:09 by bcastelo         ###   ########.fr       */
+/*   Updated: 2024/05/12 19:40:30 by bcastelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ ClapTrap::ClapTrap( void ) : Name("Unknown") , HitPoints(10) , EnergyPoints(10) 
 
 ClapTrap::ClapTrap( std::string Name ) : Name(Name) , HitPoints(10) , EnergyPoints(10) , AttackDamage(0)
 {
-	std::cout << "ClaptTrap constructor called to create " << Name << std::endl;
+	std::cout << "ClapTrap constructor called to create " << Name << std::endl;
 }
 
 ClapTrap::ClapTrap( const ClapTrap& src) : Name(src.Name) , HitPoints(src.HitPoints) , EnergyPoints(src.EnergyPoints) , AttackDamage(src.AttackDamage)
@@ -49,7 +49,7 @@ void	ClapTrap::attack(const std::string& target)
 {
 	if (!HitPoints)
 	{
-		std::cout << "ClapTrap " << Name << " cannot attack " << target <<  " because don't have Hit Points!" << std::endl;
+		std::cout << "ClapTrap " << Name << " cannot attack " << target <<  " because doesn't have Hit Points!" << std::endl;
 		return;
 	}
 	if (EnergyPoints > 0)
@@ -59,7 +59,7 @@ void	ClapTrap::attack(const std::string& target)
 	}
 	else
 	{
-		std::cout << "ClapTrap " << Name << " cannot attack " << target <<  " because don't have Energy Points!" << std::endl;
+		std::cout << "ClapTrap " << Name << " cannot attack " << target <<  " because doesn't have Energy Points!" << std::endl;
 	}
 }
 
@@ -79,11 +79,6 @@ void	ClapTrap::takeDamage(unsigned int amount)
 
 void	ClapTrap::beRepaired(unsigned int amount)
 {
-	if (!HitPoints)
-	{
-		std::cout << "ClapTrap " << Name << " cannot be repaired because don't have Hit Points!" << std::endl;
-		return;
-	}
 	if (EnergyPoints > 0)
 	{
 		std::cout << "ClapTrap " << Name << " is repaired with " << amount <<  " Hit points" << std::endl;
@@ -92,6 +87,6 @@ void	ClapTrap::beRepaired(unsigned int amount)
 	}
 	else
 	{
-		std::cout << "ClapTrap " << Name << " cannot be repaired because don't have Energy Points!" << std::endl;
+		std::cout << "ClapTrap " << Name << " cannot be repaired because doesn't have Energy Points!" << std::endl;
 	}
 }

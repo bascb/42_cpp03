@@ -6,7 +6,7 @@
 /*   By: bcastelo <bcastelo@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/03 22:01:49 by bcastelo          #+#    #+#             */
-/*   Updated: 2024/03/03 22:59:51 by bcastelo         ###   ########.fr       */
+/*   Updated: 2024/05/12 20:43:34 by bcastelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,24 @@ ScavTrap::ScavTrap( std::string Name ) : ClapTrap(Name)
 	AttackDamage = 20;
 }
 
+ScavTrap::ScavTrap( const ScavTrap& src) : ClapTrap(src)
+{
+	std::cout << "ScavTrap Copy constructor called for " << src.Name << std::endl;
+}
+
+ScavTrap&	ScavTrap::operator=( const ScavTrap& src)
+{
+	std::cout << "ScavTrap Copy assignment operator called for " << src.Name << std::endl;
+	if (this != &src)
+	{
+		this->Name = src.Name;
+		this->HitPoints = src.HitPoints;
+		this->EnergyPoints = src.EnergyPoints;
+		this->AttackDamage = src.AttackDamage;
+	}
+	return (*this);
+}
+
 ScavTrap::~ScavTrap( void )
 {
 	std::cout << "ScavTrap Destructor called for " << Name << std::endl;
@@ -37,7 +55,7 @@ void	ScavTrap::attack(const std::string& target)
 {
 	if (!HitPoints)
 	{
-		std::cout << "ScavTrap " << Name << " cannot attack " << target <<  " because don't have Hit Points!" << std::endl;
+		std::cout << "ScavTrap " << Name << " cannot attack " << target <<  " because doesn't have Hit Points!" << std::endl;
 		return;
 	}
 	if (EnergyPoints > 0)
@@ -47,7 +65,7 @@ void	ScavTrap::attack(const std::string& target)
 	}
 	else
 	{
-		std::cout << "ScavTrap " << Name << " cannot attack " << target <<  " because don't have Energy Points!" << std::endl;
+		std::cout << "ScavTrap " << Name << " cannot attack " << target <<  " because doesn't have Energy Points!" << std::endl;
 	}
 }
 

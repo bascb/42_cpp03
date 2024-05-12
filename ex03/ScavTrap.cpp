@@ -6,7 +6,7 @@
 /*   By: bcastelo <bcastelo@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/03 22:01:49 by bcastelo          #+#    #+#             */
-/*   Updated: 2024/03/10 10:16:55 by bcastelo         ###   ########.fr       */
+/*   Updated: 2024/05/12 20:58:23 by bcastelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ ScavTrap::ScavTrap( std::string NewName ) : ClapTrap(NewName)
 	AttackDamage = 20;
 }
 
-/*ScavTrap::ScavTrap( const ScavTrap& src) : ClapTrap(src)
+ScavTrap::ScavTrap( const ScavTrap& src) : ClapTrap(src)
 {
 	std::cout << "ScavTrap Copy constructor called for " << src.Name << std::endl;
 }
@@ -44,7 +44,7 @@ ScavTrap&	ScavTrap::operator=( const ScavTrap& src)
 		this->AttackDamage = src.AttackDamage;
 	}
 	return (*this);
-} */
+}
 
 ScavTrap::~ScavTrap( void )
 {

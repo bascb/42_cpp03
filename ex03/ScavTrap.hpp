@@ -6,7 +6,7 @@
 /*   By: bcastelo <bcastelo@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/03 21:52:58 by bcastelo          #+#    #+#             */
-/*   Updated: 2024/03/10 12:10:21 by bcastelo         ###   ########.fr       */
+/*   Updated: 2024/05/12 20:58:32 by bcastelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,8 @@ class ScavTrap : public virtual ClapTrap
 	public:
 		ScavTrap( void );
 		ScavTrap( std::string NewName );
-		//ScavTrap( const ScavTrap& );
-		//ScavTrap&	operator=( const ScavTrap& );
+		ScavTrap( const ScavTrap& );
+		ScavTrap&	operator=( const ScavTrap& );
 		~ScavTrap( void );
 		void	attack(const std::string& target);
 		void	guardGate( void );

@@ -6,7 +6,7 @@
 /*   By: bcastelo <bcastelo@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/04 21:27:01 by bcastelo          #+#    #+#             */
-/*   Updated: 2024/03/10 10:16:30 by bcastelo         ###   ########.fr       */
+/*   Updated: 2024/05/13 19:14:05 by bcastelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ FragTrap::FragTrap( std::string NewName ) : ClapTrap(NewName)
 	AttackDamage = 30;
 }
 
-/* FragTrap::FragTrap( const FragTrap& src) : ClapTrap(src)
+ FragTrap::FragTrap( const FragTrap& src) : ClapTrap(src)
 {
 	std::cout << "FragTrap Copy constructor called for " << src.Name << std::endl;
 }
@@ -44,7 +44,7 @@ FragTrap&	FragTrap::operator=( const FragTrap& src)
 		this->AttackDamage = src.AttackDamage;
 	}
 	return (*this);
-} */
+}
 
 FragTrap::~FragTrap( void )
 {

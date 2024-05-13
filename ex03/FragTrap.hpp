@@ -6,7 +6,7 @@
 /*   By: bcastelo <bcastelo@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/04 21:25:06 by bcastelo          #+#    #+#             */
-/*   Updated: 2024/03/10 12:10:09 by bcastelo         ###   ########.fr       */
+/*   Updated: 2024/05/13 19:13:51 by bcastelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,8 @@ class FragTrap : public virtual ClapTrap
 	public:
 		FragTrap( void );
 		FragTrap( std::string NewName );
-		//FragTrap( const FragTrap& );
-		//FragTrap&	operator=( const FragTrap& );
+		FragTrap( const FragTrap& );
+		FragTrap&	operator=( const FragTrap& );
 		~FragTrap( void );
 		void	highFivesGuys( void );
 };

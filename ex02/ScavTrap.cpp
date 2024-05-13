@@ -6,7 +6,7 @@
 /*   By: bcastelo <bcastelo@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/03 22:01:49 by bcastelo          #+#    #+#             */
-/*   Updated: 2024/05/12 20:59:06 by bcastelo         ###   ########.fr       */
+/*   Updated: 2024/05/13 19:06:27 by bcastelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,7 @@ void	ScavTrap::attack(const std::string& target)
 {
 	if (!HitPoints)
 	{
-		std::cout << "ScavTrap " << Name << " cannot attack " << target <<  " because don't have Hit Points!" << std::endl;
+		std::cout << "ScavTrap " << Name << " cannot attack " << target <<  " because doesn't have Hit Points!" << std::endl;
 		return;
 	}
 	if (EnergyPoints > 0)
@@ -65,7 +65,7 @@ void	ScavTrap::attack(const std::string& target)
 	}
 	else
 	{
-		std::cout << "ScavTrap " << Name << " cannot attack " << target <<  " because don't have Energy Points!" << std::endl;
+		std::cout << "ScavTrap " << Name << " cannot attack " << target <<  " because doesn't have Energy Points!" << std::endl;
 	}
 }
 

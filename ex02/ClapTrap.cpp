@@ -6,7 +6,7 @@
 /*   By: bcastelo <bcastelo@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/03 18:16:13 by bcastelo          #+#    #+#             */
-/*   Updated: 2024/05/12 19:54:39 by bcastelo         ###   ########.fr       */
+/*   Updated: 2024/05/13 20:04:50 by bcastelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ ClapTrap::ClapTrap( void ) : Name("Unknown") , HitPoints(10) , EnergyPoints(10) 
 
 ClapTrap::ClapTrap( std::string Name ) : Name(Name) , HitPoints(10) , EnergyPoints(10) , AttackDamage(0)
 {
-	std::cout << "ClaptTrap constructor called to create " << Name << std::endl;
+	std::cout << "ClapTrap constructor called to create " << Name << std::endl;
 }
 
 ClapTrap::ClapTrap( const ClapTrap& src) : Name(src.Name) , HitPoints(src.HitPoints) , EnergyPoints(src.EnergyPoints) , AttackDamage(src.AttackDamage)

@@ -6,7 +6,7 @@
 /*   By: bcastelo <bcastelo@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/05 21:45:10 by bcastelo          #+#    #+#             */
-/*   Updated: 2024/03/13 21:49:04 by bcastelo         ###   ########.fr       */
+/*   Updated: 2024/05/13 19:42:17 by bcastelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,9 +50,4 @@ DiamondTrap::~DiamondTrap( void )
 void	DiamondTrap::whoAmI( void )
 {
 	std::cout << "DiamondTrap Name is:" << Name << " and " << ClapTrap::Name << std::endl;
-}
-
-void	DiamondTrap::getData( void )
-{
-	std::cout << "DiamondTrap HitPoints: " << HitPoints << " EnergyPoints: " << EnergyPoints << " AtttackDamage: " << AttackDamage << std::endl;
 }

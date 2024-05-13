@@ -6,7 +6,7 @@
 /*   By: bcastelo <bcastelo@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/03 17:29:29 by bcastelo          #+#    #+#             */
-/*   Updated: 2024/05/13 19:37:51 by bcastelo         ###   ########.fr       */
+/*   Updated: 2024/05/13 19:43:24 by bcastelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,10 +32,10 @@ int	main( void )
 	z1.whoAmI();
 	z2.whoAmI();
 	z3.whoAmI();
-	z1.getData();
 	std::cout << "**** War ****" << std::endl;
 	z1.attack("Target 1");
 	z2.highFivesGuys();
+	z1.guardGate();
 	std::cout << "**** Destructors time ****" << std::endl;
 	return (0);
 }

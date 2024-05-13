@@ -6,7 +6,7 @@
 /*   By: bcastelo <bcastelo@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/03 17:29:29 by bcastelo          #+#    #+#             */
-/*   Updated: 2024/03/13 21:52:41 by bcastelo         ###   ########.fr       */
+/*   Updated: 2024/05/13 19:37:51 by bcastelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,18 +21,21 @@
 int	main( void )
 {
 	DiamondTrap z1("Weird");
-	std::cout << "Copy constructor" << std::endl;
+	std::cout << "**** Copy constructor ****" << std::endl;
 	DiamondTrap z2( z1 );
-	std::cout << "Copy assignemt 1" << std::endl;
+	std::cout << "**** Copy assignemt 1 ****" << std::endl;
 	DiamondTrap z3 = z2;
 	
-	std::cout << "Copy assignemt 2" << std::endl;
+	std::cout << "**** Copy assignemt 2 ****" << std::endl;
 	z3 = z1;
+	std::cout << "**** Who Am I ****" << std::endl;
 	z1.whoAmI();
 	z2.whoAmI();
 	z3.whoAmI();
 	z1.getData();
+	std::cout << "**** War ****" << std::endl;
 	z1.attack("Target 1");
 	z2.highFivesGuys();
+	std::cout << "**** Destructors time ****" << std::endl;
 	return (0);
 }

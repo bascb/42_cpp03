@@ -6,7 +6,7 @@
 /*   By: bcastelo <bcastelo@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/05 21:41:57 by bcastelo          #+#    #+#             */
-/*   Updated: 2024/03/13 21:41:26 by bcastelo         ###   ########.fr       */
+/*   Updated: 2024/05/13 19:27:35 by bcastelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,6 @@
 
 class DiamondTrap : public ScavTrap , public FragTrap
 {
-	private:
-		std::string	Name;
 	public:
 		DiamondTrap( void );
 		DiamondTrap( std::string NewName );
@@ -31,6 +29,8 @@ class DiamondTrap : public ScavTrap , public FragTrap
 		~DiamondTrap( void );
 		void	whoAmI( void );
 		void	getData( void );
+	private:
+		std::string	Name;
 };
 
 #endif

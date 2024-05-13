@@ -6,7 +6,7 @@
 /*   By: bcastelo <bcastelo@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/03 17:29:29 by bcastelo          #+#    #+#             */
-/*   Updated: 2024/05/13 19:17:21 by bcastelo         ###   ########.fr       */
+/*   Updated: 2024/05/13 19:20:48 by bcastelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,5 +45,6 @@ int	main( void )
 	f1.attack("Loser");
 	f1.takeDamage(30);
 	f1.highFivesGuys();
+	std::cout << "****************** Destructors time **************" << std::endl;
 	return (0);
 }
